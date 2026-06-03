@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZETA ORGANIZATION</title>
+
+ <link rel="icon" type="image/png" href=""C:\Users\dspra\OneDrive\Desktop\ZETA WEBSITE\ZETA_LOGO.png">
+ 
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:#081b29;
+overflow:hidden;
+
+}
+
+/* Animated Neon Background */
+
+body::before{
+
+content:"";
+
+position:absolute;
+width:600px;
+height:600px;
+
+background:linear-gradient(
+45deg,
+#00ffff,
+#007bff,
+#00ffff
+);
+
+border-radius:50%;
+
+top:-200px;
+left:-200px;
+
+filter:blur(120px);
+
+animation:move1 8s infinite alternate;
+
+}
+
+body::after{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+height:500px;
+
+background:linear-gradient(
+45deg,
+#FFD700,
+#00ffff
+);
+
+border-radius:50%;
+
+bottom:-150px;
+right:-150px;
+
+filter:blur(120px);
+
+animation:move2 8s infinite alternate;
+
+}
+
+@keyframes move1{
+100%{
+transform:translate(150px,100px);
+}
+}
+
+@keyframes move2{
+100%{
+transform:translate(-150px,-100px);
+}
+}
+
+/* Glass Card */
+
+.container{
+
+position:relative;
+z-index:1;
+
+width:90%;
+max-width:700px;
+
+padding:40px;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.2);
+
+border-radius:25px;
+
+box-shadow:
+0 0 20px rgba(0,255,255,0.3),
+0 0 50px rgba(0,255,255,0.1);
+
+}
+
+.logo{
+
+text-align:center;
+
+}
+
+.logo img{
+
+width:90px;
+
+margin-bottom:10px;
+
+}
+
+.logo h1{
+
+color:#FFD700;
+
+}
+
+.logo p{
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+/* Form */
+
+.input-box{
+
+margin-bottom:18px;
+
+}
+
+.input-box label{
+
+display:block;
+
+margin-bottom:5px;
+
+color:white;
+
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+outline:none;
+
+border-radius:10px;
+
+background:rgba(255,255,255,0.15);
+
+color:white;
+
+}
+
+.input-box input::placeholder{
+
+color:#ddd;
+
+}
+
+textarea{
+
+resize:none;
+
+}
+
+/* Neon Circuit Button */
+
+.btn{
+
+position:relative;
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:12px;
+
+background:#00cfff;
+
+color:#081b29;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+overflow:hidden;
+
+transition:0.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 0 15px #00ffff,
+0 0 40px #00ffff,
+0 0 80px #00ffff;
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.8),
+transparent
+);
+
+transition:0.8s;
+
+}
+
+.btn:hover::before{
+
+left:100%;
+
+}
+
+/* Circuit Lines */
+
+.circuit{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+top:0;
+left:0;
+
+pointer-events:none;
+
+}
+
+.line{
+
+position:absolute;
+
+background:#00ffff;
+
+animation:pulse 2s infinite;
+
+}
+
+.line1{
+width:2px;
+height:100px;
+top:20px;
+left:30px;
+}
+
+.line2{
+width:100px;
+height:2px;
+bottom:40px;
+right:50px;
+}
+
+.line3{
+width:2px;
+height:80px;
+bottom:80px;
+right:120px;
+}
+
+@keyframes pulse{
+
+0%,100%{
+opacity:0.3;
+}
+
+50%{
+opacity:1;
+box-shadow:0 0 20px #00ffff;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="circuit">
+
+<div class="line line1"></div>
+<div class="line line2"></div>
+<div class="line line3"></div>
+
+</div>
+
+<div class="logo">
+
+<img src="file:///C:/Users/dspra/OneDrive/Desktop/ZETA WEBSITE/ZETA_LOGO.png" alt="ZETA Logo">
+
+<h1>ZETA Membership Registration</h1>
+
+<p>
+Zone for Electronics Technologies and Automation
+</p>
+
+</div>
+
+<form>
+
+<div class="input-box">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="fullName"
+placeholder="Enter Full Name"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Roll Number</label>
+
+<input
+type="text"
+placeholder="Enter Roll Number"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Branch</label>
+
+<input
+type="text"
+placeholder="ECE"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Year</label>
+
+<select required>
+
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+
+</select>
+
+</div>
+
+<div class="input-box">
+
+<label>Position Applying For</label>
+
+<select id="position" required>
+
+<option value="">Select Position</option>
+<option>President</option>
+<option>Vice President</option>
+<option>Secretary</option>
+<option>Vice Secretary</option>
+<option>Treasurer</option>
+<option>Technical Lead</option>
+<option>Event Coordinator</option>
+<option>Media Coordinator</option>
+
+</select>
+
+</div>
+
+<button class="btn" type="submit">
+
+Submit Application
+
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+document
+.getElementById("membershipForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const name =
+document.getElementById("fullName").value;
+
+const position =
+document.getElementById("position").value;
+
+localStorage.setItem("memberName", name);
+localStorage.setItem("memberPosition", position);
+
+alert("Application Submitted Successfully!");
+
+window.location.href = "index.html";
+
+});
+
+</script>
+
+</body>
+</html>
